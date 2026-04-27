@@ -1,0 +1,885 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: black;
+}
+
+.container{
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+/* Header*/
+header{
+    width: 100%;
+    position: fixed;
+    background: transparent;
+}
+
+/* Navbar */
+nav{
+    width: 100%;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background: transparent;
+}
+
+nav h1{
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 25px;
+    color: mediumspringgreen;
+}
+
+nav .navbar{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu-toggle{
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid mediumspringgreen;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px 7px;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 999px;
+    background: mediumspringgreen;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.menu-toggle span + span{
+    margin-top: 6px;
+}
+
+nav .navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav .navbar a:hover{
+    box-shadow: 0 0 20px mediumspringgreen;
+    background-color: mediumspringgreen;
+    color: black;
+    border-radius: 5px;
+    transform: translateY(-10px);
+}
+
+/* Main */
+main{
+    width: 100%;
+    background: #000000;
+}
+
+/* Section */
+section{
+    padding: 50px 0;
+}
+
+/* Home */
+.home{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    gap: 48px;
+}
+
+/* Text */
+.home .text h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.home .text h2{
+    font-size: 55px;
+    font-weight: 600;
+    margin: 20px 0;
+    color: mediumspringgreen;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid mediumspringgreen;
+    width: 0;
+    animation: typing 3s steps(20) infinite, blink 0.5s infinite;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    40% { width: 100% }   
+    60% { width: 100% }  
+    100% { width: 0 }     
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.home .text h3{
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/* Image */
+.pic{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-image: url(img.jpeg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 30px mediumspringgreen;
+    animation: glow 2s infinite ease-in-out;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px mediumspringgreen;
+    }
+    50% {
+        box-shadow: 0 0 50px mediumspringgreen;
+    }
+    100% {
+        box-shadow: 0 0 20px mediumspringgreen;
+    }
+}
+
+/* Button */
+.home .text button{
+    padding: 15px 25px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 550;
+    color: mediumspringgreen;
+    border-radius: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid mediumspringgreen;
+    animation: glow 2s infinite ease-in-out;
+}
+
+.home .text button:hover{
+    background-color: mediumspringgreen;
+    color: black;
+}
+/* About section */
+
+#about{
+    width: 100%;
+}
+/* About Heading */
+#about h1{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px 0;
+    color: mediumspringgreen;
+}
+/* About Content */
+.aboutme{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: space-between;
+    gap: 48px;
+}
+/* About Text */
+.aboutme .text2{
+    width: 62%;
+    margin: 40px 0;
+}
+/* About Text */
+.aboutme .text2 h2{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+/* About Text */
+.aboutme .text2 h2 span{
+    color: mediumspringgreen;
+    font-size: 48px;
+}
+/* About Text */
+.aboutme .text2 p{
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 400;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.aboutme .text2 p br{
+    display: none;
+}
+/* About Image */
+.aboutme .pic2{
+    width: 350px;
+    height: 350px;
+    background-image: url(img2.jpeg);
+    background-size: cover;
+    background-position: top;
+    border-radius: 50% ;
+    box-shadow: 0 0 30px mediumspringgreen;
+    animation: glow 2s infinite ease-in-out;
+}
+/* About Button */
+.aboutme .text2 .btn{
+    padding: 15px 25px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 550;
+    color: mediumspringgreen;
+    border-radius: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid mediumspringgreen;
+    animation: glow 2s infinite ease-in-out;
+}
+/* Button Hover Effects */
+.aboutme .text2 .btn:hover{
+    background-color: mediumspringgreen;
+    color: black;
+}
+/* Services content */
+#services{
+    width: 100%;
+}
+#services h1{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px 0;
+    color: mediumspringgreen;
+}
+/* Services Box1 */
+.servicesbox{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    padding: 80px 0;
+    gap: 40px;
+}
+.servicesbox .service{
+    min-height: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 24px 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 20px mediumspringgreen;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.servicesbox .service i{
+    font-size: 50px;
+    color: mediumspringgreen;
+}
+.servicesbox .service h2{
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.servicesbox .service p{
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 400;
+    margin-top: 6px;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.servicesbox .service p br{
+    display: none;
+}
+.servicesbox .service:hover, .servicesbox .service:hover h2, .servicesbox .service:hover p, .servicesbox .service:hover i{
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px mediumspringgreen;
+    background-color: mediumspringgreen;
+    color: black;
+    cursor: pointer;
+}
+/* Experience Section */
+#experience{
+    width: 100%;
+}
+#experience h1{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px 0;
+    color: mediumspringgreen;
+}
+.experiencebox{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    padding: 80px 0;
+    gap: 40px;
+}
+.experiencebox .experience{
+    min-height: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 24px 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 20px mediumspringgreen;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.experiencebox .experience h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+.experiencebox .experience p{
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-top: 6px;
+    overflow-wrap: break-word;
+}
+
+.experiencebox .experience p br{
+    display: none;
+}
+.experiencebox .experience:hover, .experiencebox .experience:hover h2, .experiencebox .experience:hover p{
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px mediumspringgreen;
+    background-color: mediumspringgreen;
+    color: black;
+    cursor: pointer;
+}
+/* Contact Section */
+#contact{
+    width: 100%;
+}
+#contact h1{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px 0;
+    color: mediumspringgreen;
+}
+.contactbox{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+    gap: 80px;
+}
+.contactbox .address{
+    height: 200px;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px mediumspringgreen;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contactbox .address h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+.contactbox .address p{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.contactbox .address:hover, .contactbox .address:hover h2, .contactbox .address:hover p{
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px mediumspringgreen;
+    background-color: mediumspringgreen;
+    color: black;
+    cursor: pointer;
+}
+.contactbox .email{
+    height: 200px;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px mediumspringgreen;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contactbox .email h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+.contactbox .email p{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.contactbox .email:hover, .contactbox .email:hover h2, .contactbox .email:hover p{
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px mediumspringgreen;
+    background-color: mediumspringgreen;
+    color: black;
+    cursor: pointer;
+}
+.contactbox .call{
+    height: 200px;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px mediumspringgreen;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contactbox .call h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+.contactbox .call p{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.contactbox .call:hover, .contactbox .call:hover h2, .contactbox .call:hover p{
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px mediumspringgreen;
+    background-color: mediumspringgreen;
+    color: black;
+    cursor: pointer;
+}
+.contactbox .sendmsg{
+    height: 500px;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px mediumspringgreen;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contactbox .input{
+    width: 80%;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid mediumspringgreen;
+}
+
+.contactbox .sendmsg textarea{
+    width: 80%;
+    height: 150px;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid mediumspringgreen;
+}  
+.contactbox .sendmsg button{
+    padding: 15px 25px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 550;
+    color: mediumspringgreen;
+    border-radius: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid mediumspringgreen;
+    animation: glow 2s infinite ease-in-out;
+}
+.contactbox .sendmsg button:hover{
+    background-color: mediumspringgreen;
+    color: black;
+} 
+
+/* Footer */
+footer{
+    width: 100%;
+    background: black;
+    padding: 20px;
+    text-align: center;
+}
+.footer .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    gap: 50px;
+}
+.footer .social .fa-facebook:hover{
+    color: #1877F2;
+   text-shadow: 0 0 20px #1877F2;
+   transform: translateY(-10px);
+}
+.footer .social .fa-twitter:hover{
+    color: #1DA1F2;
+   text-shadow: 0 0 20px #1DA1F2;
+    transform: translateY(-10px);
+}
+.footer .social .fa-instagram:hover{
+    color: #E4405F;
+   text-shadow: 0 0 20px #E4405F;
+   transform: translateY(-10px);
+}
+.footer .social .fa-linkedin:hover{
+    color: #0077B5;
+   text-shadow: 0 0 20px #0077B5;
+   transform: translateY(-10px);
+}
+.footer .link{
+    margin-top: 40px;
+    font-size: 18px;
+    color: mediumspringgreen;
+}
+.footer .link a{
+    text-decoration: none;
+    gap: 20px;
+    padding: 20px 10px;
+}
+.footer .link a:hover{
+    color: black;
+    background-color: mediumspringgreen;
+    border-radius: 5px;
+    box-shadow: 0 0 20px mediumspringgreen;
+}
+.footer p{
+    margin-top: 30px;
+    font-size: 16px;
+    color: mediumspringgreen;
+}
+
+/*  Responsive  */
+
+/* Laptop / small desktop */
+@media (max-width: 1366px) {
+    nav {
+        padding: 20px 28px;
+    }
+
+    .home,
+    .aboutme,
+    .servicesbox,
+    .experiencebox,
+    .contactbox {
+        padding-left: 0;
+        padding-right: 0;
+        gap: 32px;
+    }
+
+    .home,
+    .aboutme {
+        gap: 64px;
+    }
+
+    .home .text h1 { font-size: 40px; }
+    .home .text h2 { font-size: 44px; }
+    .home .text h3 { font-size: 18px; line-height: 1.7; }
+}
+
+/* Laptop (small) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    nav {
+        padding: 16px 24px;
+    }
+
+    nav .navbar {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    nav .navbar a {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .home,
+    .aboutme,
+    .servicesbox,
+    .experiencebox,
+    .contactbox {
+        padding-left: 0;
+        padding-right: 0;
+        gap: 24px;
+    }
+
+    .home,
+    .aboutme {
+        gap: 52px;
+    }
+
+    .servicesbox,
+    .experiencebox {
+        gap: 16px;
+    }
+}
+
+/* Tablet / iPad */
+@media (max-width: 991px) {
+    header {
+        position: static;
+    }
+
+    nav {
+        height: auto;
+        padding: 16px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    section {
+        padding: 36px 0;
+    }
+
+    .home,
+    .aboutme {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 36px;
+    }
+
+    .home .text h2 {
+        white-space: normal;
+        width: auto;
+        border-right: 0;
+        animation: none;
+    }
+
+    .aboutme .text2 {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .servicesbox,
+    .experiencebox {
+        grid-template-columns: 1fr;
+    }
+
+    .contactbox {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contactbox .sendmsg,
+    .contactbox .address,
+    .contactbox .email,
+    .contactbox .call {
+        height: auto;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    nav .navbar {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 16px;
+        left: 16px;
+        z-index: 30;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border: 1px solid rgba(0, 250, 154, 0.45);
+        border-radius: 10px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.95);
+    }
+
+    nav .navbar a {
+        padding: 12px 14px;
+        border-bottom: 1px solid rgba(0, 250, 154, 0.25);
+    }
+
+    nav .navbar a:last-child {
+        border-bottom: 0;
+    }
+
+    nav.nav-open .navbar {
+        display: flex;
+    }
+
+    nav.nav-open .menu-toggle span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    nav.nav-open .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    nav.nav-open .menu-toggle span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    nav h1 {
+        font-size: 20px;
+    }
+
+    nav .navbar a { font-size: 14px; }
+
+    .home,
+    .aboutme,
+    .servicesbox,
+    .experiencebox,
+    .contactbox {
+        padding-left: 0;
+        padding-right: 0;
+        gap: 20px;
+    }
+
+    .home .text h1 { font-size: 30px; }
+    .home .text h2 { font-size: 30px; margin: 12px 0; }
+    .home .text h3 { font-size: 16px; line-height: 1.6; }
+
+    .pic,
+    .aboutme .pic2 {
+        width: 230px;
+        height: 230px;
+    }
+
+    #about h1,
+    #services h1,
+    #experience h1,
+    #contact h1 {
+        font-size: 28px;
+    }
+
+    .aboutme .text2 h2 {
+        font-size: 22px;
+    }
+
+    .aboutme .text2 h2 span {
+        font-size: 30px;
+    }
+
+    .aboutme .text2 p,
+    .servicesbox .service p,
+    .experiencebox .experience p,
+    .contactbox .address p,
+    .contactbox .email p,
+    .contactbox .call p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .servicesbox .service h2,
+    .experiencebox .experience h2,
+    .contactbox .address h2,
+    .contactbox .email h2,
+    .contactbox .call h2 {
+        font-size: 22px;
+    }
+
+    .contactbox .input,
+    .contactbox .sendmsg textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .footer .social {
+        gap: 18px;
+        font-size: 24px;
+    }
+
+    .footer .link {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .footer .link a {
+        display: inline-block;
+        padding: 8px 6px;
+    }
+
+    .footer p {
+        font-size: 13px;
+    }
+}
+
+/* iPhone small screens */
+@media (max-width: 430px) {
+    .home .text h1 { font-size: 26px; }
+    .home .text h2 { font-size: 24px; }
+    .home .text h3 { font-size: 14px; }
+
+    .home .text button,
+    .aboutme .text2 .btn,
+    .contactbox .sendmsg button {
+        width: 100%;
+        margin-top: 12px;
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+
+    .servicesbox .service i {
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
